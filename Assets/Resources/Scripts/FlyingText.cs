@@ -36,7 +36,10 @@ public class FlyingText : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        scoreObject.SendMessage("ScoreUp");
+        if (m_lang == "eng")
+            scoreObject.SendMessage("ScoreUp");
+        else
+            scoreObject.SendMessage("ScoreDown");
         Destroy(gameObject);
     }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float gravity = -9.8f;
+    public Animator animator = null;
+
+    private const float gravity = -9.8f;
     private Vector3 gravityVector = Vector3.zero;
     private bool m_isJump = false;
 
@@ -18,13 +20,14 @@ public class Player : MonoBehaviour
         Vector3 direction = Vector3.zero;
 
         if (Input.GetKey(KeyCode.RightArrow))
-        {
             direction.x += 5.0f;
-        }
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
             direction.x -= 5.0f;
-        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+            animator.SetBool("Spin", true);
+        else
+            animator.SetBool("Spin", false);
 
         if (!m_isJump && Input.GetKeyDown(KeyCode.Space))
         {
