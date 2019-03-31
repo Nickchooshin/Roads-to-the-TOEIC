@@ -7,6 +7,7 @@ public class TestTime : MonoBehaviour
 {
     public Text timeText = null;
     public float MaxTime = 60.0f;
+    public Score scoreObject = null;
 
     private float m_time = 0.0f;
 
@@ -15,6 +16,11 @@ public class TestTime : MonoBehaviour
         m_time += Time.deltaTime;
 
         UpdateTime();
+
+        if (m_time >= MaxTime)
+        {
+            scoreObject.SendMessage("CheckScore");
+        }
     }
 
     private void UpdateTime()
