@@ -18,3 +18,17 @@
 * Visual Studio 2017
 * git
 * Windows 10 Edu
+
+- - -
+
+스크린샷
+=============
+<img src="https://i.imgur.com/FrVcrBX.png" width="100%"></img>
+<img src="https://i.imgur.com/xlbY8AM.png" width="100%"></img>
+
+- - -
+
+다운로드
+=============
+https://drive.google.com/file/d/1nAGGsIBMw7rfY9lVQNzZFk56SlCbDvh5/view?usp=sharing
+
