@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {
     public Animator animator = null;
+    public AudioClip[] audioEffect = null;
+    public WordKor wordKorPrefab = null;
+    public Canvas canvas = null;
 
     private const float gravity = -9.8f;
     private Vector3 gravityVector = Vector3.zero;
     private bool m_isJump = false;
 
+    private AudioSource audio = null;
+    private int audioCount = 0;
+
     void Start()
     {
-        
+        audio = gameObject.AddComponent<AudioSource>();
+        audio.loop = false;
+
+        audioCount = audioEffect.Length;
     }
     
     void Update()
@@ -56,5 +66,21 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -1.31f);
             m_isJump = false;
         }
+    }
+
+    private void GetWord(string str)
+    {
+        WordKor wordKor = Instantiate<WordKor>(wordKorPrefab, canvas.transform);
+        wordKor.SetText(str);
+        wordKor.transform.position = new Vector3(transform.position.x, transform.position.y, wordKor.transform.position.z);
+    }
+
+    private void AudioEffect()
+    {
+        System.Random random = new System.Random();
+        int r = random.Next(0, audioCount);
+
+        audio.clip = audioEffect[r];
+        audio.Play();
     }
 }

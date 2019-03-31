@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
+    void Start()
+    {
+        Screen.SetResolution(1280, 720, false);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

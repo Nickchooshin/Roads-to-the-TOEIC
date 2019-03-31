@@ -5,5 +5,18 @@
 {"word" : "remind", "kor" : "생각나게 하다", "lang" : "eng"},
 {"word" : "youngster", "kor" : "젊은이", "lang" : "eng"},
 {"word" : "fold", "kor" : "접다", "lang" : "eng"},
-{"word" : "chest", "kor" : "가슴", "lang" : "eng"}
+{"word" : "chest", "kor" : "가슴", "lang" : "eng"},
+{"word" : "tap", "kor" : "툭툭 치다", "lang" : "eng"},
+{"word" : "impatient", "kor" : "참을성 없는", "lang" : "eng"},
+{"word" : "patient", "kor" : "인내력 있는", "lang" : "eng"},
+{"word" : "interact", "kor" : "서로 영향을 끼치다", "lang" : "eng"},
+{"word" : "positively", "kor" : "긍정적으로", "lang" : "eng"},
+{"word" : "negatively", "kor" : "부정적으로", "lang" : "eng"},
+{"word" : "elevator", "kor" : "승강기", "lang" : "eng"},
+{"word" : "attitude", "kor" : "승객", "lang" : "eng"},
+{"word" : "глупый", "kor" : "바보", "lang" : "pус"},
+{"word" : "болван", "kor" : "멍청이", "lang" : "pус"},
+{"word" : "болван", "kor" : "멍청이", "lang" : "pус"},
+{"word" : "バカ", "kor" : "바보", "lang" : "jp"},
+{"word" : "기대현", "kor" : "백수", "lang" : "kor"}
 ]

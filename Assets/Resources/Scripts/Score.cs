@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
 
     private void ScoreUp()
     {
-        m_score += 5;
+        m_score += 12;
 
         UpdateScore();
     }

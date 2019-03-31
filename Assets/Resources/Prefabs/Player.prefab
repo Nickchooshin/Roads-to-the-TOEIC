@@ -48,6 +48,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2803938874012704180}
+  audioEffect:
+  - {fileID: 8300000, guid: 809183028740e9c44a935c32c7e17c2e, type: 3}
+  - {fileID: 8300000, guid: 2afaef3aeb0ce23408077ad7ceac36dc, type: 3}
+  - {fileID: 8300000, guid: 695841e93fffd5c4d92077dfc6d1323e, type: 3}
+  - {fileID: 8300000, guid: 4b9c6e3e846eaab46bae69b9ecf0b904, type: 3}
+  - {fileID: 8300000, guid: 23b0db988c1543d4bab6713e40b94649, type: 3}
+  - {fileID: 8300000, guid: 777d03c1dd8f8004cb97338477bc15aa, type: 3}
+  wordKorPrefab: {fileID: 292462213106381050, guid: 1b27b6fba58ee8941b4cfaa19ba8488c,
+    type: 3}
+  canvas: {fileID: 0}
 --- !u!61 &7244538497898992247
 BoxCollider2D:
   m_ObjectHideFlags: 0
