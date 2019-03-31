@@ -57,8 +57,8 @@ public class Score : MonoBehaviour
         }
         
         if (m_score >= 400)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         else
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
     }
 }
