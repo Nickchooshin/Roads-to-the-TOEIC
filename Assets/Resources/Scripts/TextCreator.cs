@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+using LitJson;
+
 public class TextCreator : MonoBehaviour
 {
     public Canvas canvas = null;
-    //public GameObject textPrefab = null;
     public FlyingText textPrefab = null;
+    public Score scoreObject = null;
 
     private System.Random random = new System.Random();
 
+    private TextAsset wordTextAsset = null;
+    private JsonData wordData = null;
+
     private void Start()
     {
+        wordTextAsset = Resources.Load<TextAsset>("Data/word");
+        wordData = JsonMapper.ToObject(wordTextAsset.text);
+
         StartCoroutine(Create());
     }
 
@@ -22,6 +30,7 @@ public class TextCreator : MonoBehaviour
         int r = 0;
         float speed = 0.0f;
         float time = 0.0f;
+        int listNumber = wordData.Count;
 
         while (true)
         {
@@ -56,10 +65,18 @@ public class TextCreator : MonoBehaviour
                     break;
             }
 
+            // Instantiate
+            r = random.Next(0, listNumber);
+
             FlyingText flyingText = Instantiate<FlyingText>(textPrefab, canvas.transform);
+            string word = wordData[r]["word"].ToString();
+            string kor = wordData[r]["kor"].ToString();
+            string lang = wordData[r]["lang"].ToString();
+
             flyingText.transform.position = new Vector3(position.x, position.y, flyingText.transform.position.z);
             flyingText.speed = speed;
-            flyingText.SetText("Moutain");
+            flyingText.scoreObject = scoreObject;
+            flyingText.Init(word, kor, lang);
 
             // wait time
             r = random.Next(0, 2);
